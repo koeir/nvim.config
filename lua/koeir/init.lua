@@ -1,0 +1,1 @@
+require("koeir.config.lazy")
