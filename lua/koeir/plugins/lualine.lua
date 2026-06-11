@@ -24,6 +24,7 @@ return {
 					theme = "nightfox",
 					icons_enabled = true,
 					component_separators = "",
+                    section_separators = "",
 					disabled_filetypes = { -- Filetypes to disable lualine for.
 						"packer",
 						"NvimTree",
