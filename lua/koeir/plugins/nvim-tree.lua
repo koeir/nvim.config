@@ -9,7 +9,6 @@ return {
 		vim.keymap.set("n", "<C-b>", vim.cmd.NvimTreeToggle)
 
 		require("nvim-tree").setup({
-
 			sort = {
 				sorter = "case_sensitive",
 			},
