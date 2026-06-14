@@ -6,7 +6,7 @@ return {
 		"nvim-tree/nvim-web-devicons",
 	},
 	config = function()
-		vim.keymap.set("n", "<C-b>", vim.cmd.NvimTreeToggle)
+		vim.keymap.set("n", "<S-t>", vim.cmd.NvimTreeToggle)
 
 		require("nvim-tree").setup({
 			sort = {
