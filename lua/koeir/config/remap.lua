@@ -27,3 +27,5 @@ vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
 -- vim.keymap.set("n", "]d", vim.diagnostic.jump({ count = -1, float = true }))
 -- vim.keyap.set("n", "'<leader>ca", vim.lsp.buf.code_action())
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist)
+
+vim.keymap.set("n", "<leader>tt", ':terminal<CR>')
