@@ -28,4 +28,5 @@ vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
 -- vim.keyap.set("n", "'<leader>ca", vim.lsp.buf.code_action())
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist)
 
-vim.keymap.set("n", "<leader>tt", ':terminal<CR>')
+vim.keymap.set("n", "<leader>tt", ":terminal<CR>")
+vim.keymap.set("t", "<A-e>", [[<C-\><C-n>]])
