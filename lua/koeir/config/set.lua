@@ -4,9 +4,9 @@ vim.g.copilot_no_tab_map = true
 
 vim.o.nu = true
 
-vim.o.tabstop = 4
-vim.o.softtabstop = 4
-vim.o.shiftwidth = 4
+vim.o.tabstop = 2
+vim.o.shiftwidth = 2
+vim.o.softtabstop = -1 -- Use value of shiftwidth
 vim.o.expandtab = true
 vim.o.smartindent = true
 
@@ -26,7 +26,7 @@ vim.o.swapfile = false
 vim.o.number = true
 -- You can also add relative line numbers, to help with jumping.
 --  Experiment for yourself to see if you like it!
-vim.o.relativenumber = true
+vim.o.relativenumber = false
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.o.mouse = "a"
