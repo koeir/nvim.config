@@ -4,8 +4,8 @@ vim.g.copilot_no_tab_map = true
 
 vim.o.nu = true
 
-vim.o.tabstop = 2
-vim.o.shiftwidth = 2
+vim.o.tabstop = 4
+vim.o.shiftwidth = 4
 vim.o.softtabstop = -1 -- Use value of shiftwidth
 vim.o.expandtab = true
 vim.o.smartindent = true
