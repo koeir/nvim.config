@@ -28,5 +28,9 @@ vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
 -- vim.keyap.set("n", "'<leader>ca", vim.lsp.buf.code_action())
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist)
 
-vim.keymap.set("n", "<leader>tt", ":terminal<CR>")
-vim.keymap.set("t", "<A-e>", [[<C-\><C-n>]])
+-- terminal shortcuts
+vim.keymap.set("n", "<leader>tt", ":terminal<CR>i")         -- open terminal
+vim.keymap.set("n", "<leader>ts", "<C-w>s:terminal<CR>i")   -- split horizontally and open terminal
+vim.keymap.set("n", "<leader>tv", "<C-w>s:terminal<CR>i")   -- split vertically and open terminal
+vim.keymap.set("t", "<A-e>", [[<C-\><C-n>]])                -- exit terminal mode
+vim.keymap.set("t", "<A-q>", [[<C-\><C-n>:q<CR>]])          -- exit and close terminal
