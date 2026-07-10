@@ -16,7 +16,7 @@
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/joshxfi/nvim.config.git ~/.config/nvim
+git clone https://github.com/koeir/nvim.config.git ~/.config/nvim
 ```
 
 ## Structure
@@ -27,35 +27,26 @@ The configuration is structured as follows:
 .
 ├── init.lua
 ├── lua
-│   └── joshxfi
+│   └── koeir
 │       ├── config
 │       │   ├── lazy.lua
 │       │   ├── remap.lua
 │       │   └── set.lua
 │       ├── init.lua
 │       └── plugins
-│           ├── barbar.lua
-│           ├── colorscheme.lua
-│           ├── completion.lua
-│           ├── formatting.lua
-│           ├── fugitive.lua
-│           ├── init.lua
-│           ├── lsp.lua
-│           ├── lualine.lua
-│           ├── nvim-tree.lua
-│           ├── telescope.lua
-│           ├── treesitter.lua
-│           └── trouble.lua
+│           └── plugin-a.lua
+│           └── plugin-b.lua
+│           └── ...
 └── README.md
 ```
 
 - `init.lua`: The entry point of the configuration.
-- `lua/joshxfi/init.lua`: Initializes the configuration.
-- `lua/joshxfi/config/`: Contains the core configuration files.
+- `lua/koeir/init.lua`: Initializes the configuration.
+- `lua/koeir/config/`: Contains the core configuration files.
   - `lazy.lua`: Plugin management with `lazy.nvim`.
   - `remap.lua`: Custom key mappings.
   - `set.lua`: Neovim options.
-- `lua/joshxfi/plugins/`: Contains the plugin configurations.
+- `lua/koeir/plugins/`: Contains the plugin configurations.
 
 ## Plugins
 
@@ -67,11 +58,11 @@ The leader key is set to `<Space>`.
 
 | Key-binding | Description |
 | :--- | :--- |
-| `C-b` | Open the file explorer |
+| `S-t` | Open the file explorer |
 | `jj` | Escape |
 | `<leader>y` | Copy to the system clipboard |
 | `<leader>Y` | Copy the current line to the system clipboard |
-| `<leader>s` | Replace the word under the cursor |
+| `<leader>s` | Substitute the word under the cursor |
 | `<leader>e` | Open the diagnostic float |
 | `<leader>q` | Open the quickfix list |
 
@@ -81,4 +72,4 @@ The leader key is set to `<Space>`.
 | :--- | :--- |
 | `<leader>ff` | Find files |
 | `<leader>gf` | Find git files |
-| `<leader>ps` | Grep string |
+| `<leader>gs` | Grep string |
