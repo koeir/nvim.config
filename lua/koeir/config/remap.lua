@@ -34,3 +34,6 @@ vim.keymap.set("n", "<leader>ts", "<C-w>s:terminal<CR>i")   -- split horizontall
 vim.keymap.set("n", "<leader>tv", "<C-w>v:terminal<CR>i")   -- split vertically and open terminal
 vim.keymap.set("t", "<A-e>", [[<C-\><C-n>]])                -- exit terminal mode
 vim.keymap.set("t", "<A-q>", [[<C-\><C-n>:q<CR>]])          -- exit and close terminal
+
+-- pane switching
+vim.keymap.set("n", "<A-w>", "<C-w>w")
