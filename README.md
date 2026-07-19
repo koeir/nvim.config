@@ -26,27 +26,37 @@ The configuration is structured as follows:
 ```
 .
 ├── init.lua
+├── lazy-lock.json
 ├── lua
-│   └── koeir
-│       ├── config
-│       │   ├── lazy.lua
-│       │   ├── remap.lua
-│       │   └── set.lua
-│       ├── init.lua
-│       └── plugins
-│           └── plugin-a.lua
-│           └── plugin-b.lua
-│           └── ...
+│   └── <user>
+│       ├── config
+│       │   ├── lazy.lua
+│       │   ├── remap.lua
+│       │   └── set.lua
+│       ├── init.lua
+│       └── plugins
+│           ├── barbar.lua
+│           ├── cmp.lua
+│           ├── colorscheme.lua
+│           ├── formatting.lua
+│           ├── indent-blankline.lua
+│           ├── init.lua
+│           ├── lsp.lua
+│           ├── lualine.lua
+│           ├── nvim-tree.lua
+│           ├── telescope.lua
+│           ├── treesitter.lua
+│           └── trouble.lua
 └── README.md
 ```
 
 - `init.lua`: The entry point of the configuration.
-- `lua/koeir/init.lua`: Initializes the configuration.
-- `lua/koeir/config/`: Contains the core configuration files.
+- `lua/<user>/init.lua`: Initializes the configuration.
+- `lua/<user>/config/`: Contains the core configuration files.
   - `lazy.lua`: Plugin management with `lazy.nvim`.
   - `remap.lua`: Custom key mappings.
   - `set.lua`: Neovim options.
-- `lua/koeir/plugins/`: Contains the plugin configurations.
+- `lua/<user>/plugins/`: Contains the plugin configurations.
 
 ## Plugins
 
