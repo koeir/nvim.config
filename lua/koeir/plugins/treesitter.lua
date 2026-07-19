@@ -14,6 +14,7 @@ local ensure_installed = {
 	"query",
 	"vim",
 	"vimdoc",
+    "zig",
 }
 
 return {
