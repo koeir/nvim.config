@@ -28,6 +28,14 @@ vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
 -- vim.keyap.set("n", "'<leader>ca", vim.lsp.buf.code_action())
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist)
 
+vim.keymap.set('n', '<leader>nf', function()
+  vim.ui.input({ prompt = 'Filename: ' }, function(filename)
+    if filename and filename ~= '' then
+      vim.cmd('edit ' .. vim.fn.fnameescape(filename))
+    end
+  end)
+end)
+
 -- terminal shortcuts
 vim.keymap.set("n", "<leader>tt", ":terminal<CR>i")         -- open terminal
 vim.keymap.set("n", "<leader>ts", "<C-w>s:terminal<CR>i")   -- split horizontally and open terminal
