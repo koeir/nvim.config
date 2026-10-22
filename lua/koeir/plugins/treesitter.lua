@@ -15,6 +15,7 @@ local ensure_installed = {
 	"vim",
 	"vimdoc",
     "zig",
+    "jinja",
 }
 
 return {
