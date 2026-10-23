@@ -17,6 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("koeir.config.remap")
 require("koeir.config.set")
+require("koeir.config.filetypes")
 
 -- Setup lazy.nvim
 require("lazy").setup({
