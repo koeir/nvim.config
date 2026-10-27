@@ -16,6 +16,7 @@ local ensure_installed = {
 	"vimdoc",
     "zig",
     "jinja",
+    "java",
 }
 
 return {
