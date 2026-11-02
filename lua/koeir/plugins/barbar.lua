@@ -1,19 +1,22 @@
 return {
 	{
 		"romgrk/barbar.nvim",
-        lazy = false,
+		lazy = false,
 		dependencies = {
 			"lewis6991/gitsigns.nvim",
 		},
-        init = function()
-            vim.g.barbar_auto_setup = false
-        end,
+		init = function()
+			vim.g.barbar_auto_setup = false
+		end,
 		config = function()
-            require("barbar").setup({
-                icons = {
-                    filetype = { enabled = false, },
-                },
-            })
+			require("barbar").setup({
+				auto_hide = 1,
+				maximum_padding = 2,
+				icons = {
+					filetype = { enabled = false },
+					button = false,
+				},
+			})
 
 			local map = vim.api.nvim_set_keymap
 			local opts = { noremap = true, silent = true }
