@@ -45,7 +45,7 @@ return {
 			-- Wipeout buffer
 			--                 :BufferWipeout
 			-- Close commands
-			--                 :BufferCloseAllButCurrent
+			map("n", "<leader>ca", "<Cmd>BufferCloseAllButCurrent<CR>", opts)
 			--                 :BufferCloseAllButPinned
 			--                 :BufferCloseAllButCurrentOrPinned
 			--                 :BufferCloseBuffersLeft
