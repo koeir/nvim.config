@@ -1,7 +1,10 @@
 -- Parsers to install up front. Add languages here as you need them.
 local ensure_installed = {
 	"bash",
+	"json",
+	"yaml",
 	"c",
+	"css",
 	"diff",
 	"html",
 	"javascript",
