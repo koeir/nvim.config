@@ -42,10 +42,12 @@ return {
 			map("n", "<A-p>", "<Cmd>BufferPin<CR>", opts)
 			-- Close buffer
 			map("n", "<A-c>", "<Cmd>BufferClose<CR>", opts)
+            -- Force close
+			map("n", "<leader>fc", "<Cmd>BufferClose!<CR>", opts)
 			-- Wipeout buffer
 			--                 :BufferWipeout
 			-- Close commands
-			map("n", "<leader>ca", "<Cmd>BufferCloseAllButCurrent<CR>", opts)
+			map("n", "<leader>cc", "<Cmd>BufferCloseAllButCurrent<CR>", opts)
 			--                 :BufferCloseAllButPinned
 			--                 :BufferCloseAllButCurrentOrPinned
 			--                 :BufferCloseBuffersLeft
