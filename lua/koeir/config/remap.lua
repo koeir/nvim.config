@@ -1,5 +1,23 @@
 local opts = { noremap = true }
 
+local function my_jump_opts(dir, severity)
+    return {
+        count = dir,
+        severity = severity,
+        wrap = true,
+        on_jump = vim.diagnostic.open_float
+    }
+end
+
+local function jump_to_error(dir)
+    vim.diagnostic.jump(
+        my_jump_opts(
+            dir,
+            vim.diagnostic.severity.ERROR
+        )
+    )
+end
+
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
@@ -23,10 +41,12 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
--- vim.keymap.set("n", "[d", vim.diagnostic.jump({ count = 1, float = true }))
--- vim.keymap.set("n", "]d", vim.diagnostic.jump({ count = -1, float = true }))
--- vim.keyap.set("n", "'<leader>ca", vim.lsp.buf.code_action())
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist)
+vim.keymap.set("n", "]d", function() vim.diagnostic.jump(my_jump_opts(1, nil)) end)
+vim.keymap.set("n", "[d", function() vim.diagnostic.jump(my_jump_opts(-1, nil)) end)
+-- vim.keyap.set("n", "'<leader>ca", vim.lsp.buf.code_action())
+vim.keymap.set('n', ']e', function() jump_to_error(1) end)
+vim.keymap.set('n', '[e', function() jump_to_error(-1) end)
 
 vim.keymap.set('n', '<leader>nf', function()
   vim.ui.input({ prompt = 'Filename: ' }, function(filename)
