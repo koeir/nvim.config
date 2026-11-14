@@ -65,3 +65,9 @@ vim.keymap.set("t", "<A-q>", [[<C-\><C-n>:q<CR>]])          -- exit and close te
 
 -- pane switching
 vim.keymap.set("n", "<A-w>", "<C-w>w")
+
+-- horizontal scrolling
+vim.keymap.set("n", "<S-l>", "zl")
+vim.keymap.set("n", "<S-l>l", "zL")
+vim.keymap.set("n", "<S-h>", "zh")
+vim.keymap.set("n", "<S-h>h", "zH")
